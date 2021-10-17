@@ -11,6 +11,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RankingComponent } from './ranking/ranking.component';
 
 import { ErrorComponent } from './error/error.component';
+import { TeamComponent } from './team/team.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,13 +22,15 @@ import { ErrorComponent } from './error/error.component';
     HomepageComponent,
     RankingComponent,
     ErrorComponent,
+    TeamComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
