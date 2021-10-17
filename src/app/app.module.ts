@@ -13,6 +13,7 @@ import { RankingComponent } from './ranking/ranking.component';
 import { ErrorComponent } from './error/error.component';
 import { TeamComponent } from './team/team.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     RankingComponent,
     ErrorComponent,
     TeamComponent,
+    FooterComponent,
     
   ],
   imports: [

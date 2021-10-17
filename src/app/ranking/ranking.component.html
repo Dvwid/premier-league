@@ -1,9 +1,5 @@
-
-
-
-
-<form class="form-inline ml-5 mt-5" >
-  <div class="form-group mx-sm-1 mb-2 mt-5">
+<form class="form-inline ml-5 mt-5 ">
+  <div class="form-group mx-sm-1 mb-2 mt-5 ">
     <label for="inputName" class="sr-only">Name</label>
     <input type="text" class="form-control" id="inputName" placeholder="Name" [(ngModel)]="name" name="Name">
   </div>
@@ -16,8 +12,6 @@
   <button type="submit" class="btn btn-secondary mb-2 ml-1 mt-5"
   (click)="resetClubs()" >Reset</button>
 </form>
-
-
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 p-5 mt-5">
   <div class="col mb-4" *ngFor="let standing of standings">

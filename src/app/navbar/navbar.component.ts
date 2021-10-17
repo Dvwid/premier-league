@@ -7,5 +7,5 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent {
   public isMenuCollapsed = true;
-
+  title:string = "Premier league"
 }
