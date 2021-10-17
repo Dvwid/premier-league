@@ -1,1 +1,12 @@
-<p>ranking works!</p>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+  <div class="col mb-4" *ngFor="let standing of standings">
+    <div class="card" >
+      <img class="card-img-top" src={{standing.team.logos[0].href}} alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{standing.team.name}}</h5>
+        <p class="card-text">This </p>
+        <p class="card-text"><small class="text-muted">{{standing.note?.rank}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>

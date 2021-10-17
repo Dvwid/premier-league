@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ranking',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  standings: any[] = []
+  constructor(private activatedRoute: ActivatedRoute) { 
+  }
+    
+  ngOnInit():void{
+    this.activatedRoute.data.subscribe((data) => {
+      console.log(data)
+      this.standings = data.league.data.standings;
+      
+    })
   }
 
 }
