@@ -1,8 +1,14 @@
 <div class="card p-3">
     <img class="card-img-top" src={{imgUrl}} alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
-      <p class="card-text">This </p>
-      <p class="card-text"><small class="text-muted">{{rank}}</small></p>
+      <h5 class="card-title">{{name}} {{abbreviation}}</h5>
+      <p class="card-text">Points: {{points}} </p>
+      <p class="card-text">Wins: {{wins}} </p>
+      <p class="card-text">Draws: {{draws}} </p>
+      <p class="card-text">Losses: {{losses}} </p>
+      <p class="card-text">Goals: {{goals}} </p>
+      <p class="card-text">Goals against: {{goalsAgainst}} </p>
+      <p class="card-text">Difference: {{difference}} </p>
+      <p class="card-text"><small class="text-muted">Rank: {{rank}}</small></p>
     </div>
 </div>
