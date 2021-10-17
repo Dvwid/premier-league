@@ -12,4 +12,9 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getUrl()
+{
+  return "url('https://fv2-4.failiem.lv/thumb_show.php?i=7c67brrxm&view')";
+}
+
 }
