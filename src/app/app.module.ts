@@ -11,6 +11,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { RankingComponent } from './ranking/ranking.component';
 
 import { ErrorComponent } from './error/error.component';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ErrorComponent } from './error/error.component';
     HomepageComponent,
     RankingComponent,
     ErrorComponent,
+    TeamComponent,
     
   ],
   imports: [

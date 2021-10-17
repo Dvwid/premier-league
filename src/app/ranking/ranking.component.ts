@@ -8,14 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RankingComponent implements OnInit {
   standings: any[] = []
-  constructor(private activatedRoute: ActivatedRoute) { 
+  
+  constructor(private activatedRoute: ActivatedRoute) {
+    console.log(this.standings.length) 
   }
     
   ngOnInit():void{
     this.activatedRoute.data.subscribe((data) => {
-      console.log(data)
       this.standings = data.league.data.standings;
-      
+      console.log(data)
     })
   }
 

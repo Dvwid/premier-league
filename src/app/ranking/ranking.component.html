@@ -1,12 +1,22 @@
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 p-5 mt-5">
   <div class="col mb-4" *ngFor="let standing of standings">
-    <div class="card" >
-      <img class="card-img-top" src={{standing.team.logos[0].href}} alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{standing.team.name}}</h5>
-        <p class="card-text">This </p>
-        <p class="card-text"><small class="text-muted">{{standing.note?.rank}}</small></p>
-      </div>
-    </div>
+    <app-team 
+      [rank]="standing.stats[8].value"
+      [name]="standing.team.name"
+      [imgUrl]="standing.team.logos[0].href"
+      [points]="standing.stats[6].value"
+      [abbreviation]="standing.team.abbreviation"
+      [wins]="standing.stats[0].value"
+      [draws]="standing.stats[2].value"
+      [losses]="standing.stats[1].value"
+      [goals]="standing.stats[4].value"
+      [goalsAgainst]="standing.stats[5].value"
+      [difference]="standing.stats[9].value"
+    >
+    
+    </app-team>
   </div>
 </div>
+

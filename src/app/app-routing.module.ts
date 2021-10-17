@@ -9,10 +9,15 @@ const routes: Routes = [
   { path: '', component: HomepageComponent},
   { path: 'ranking', component: RankingComponent, resolve: { league:GetApiService}},
   { path: '**', component: ErrorComponent},
+  {
+    path: "courses", loadChildren: ()=> import('./ranking/ranking.component')
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  
+}
