@@ -1,0 +1,37 @@
+.container-not-found {
+  height: 100vh;
+}
+.not-found-circle {
+  display: block;
+  position: relative;
+  height: 40vw;
+  width: 40vw;
+}
+.not-found-circle::after {
+  content: "";
+  border: 2px solid lightgray;
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-2%, 2%);
+}
+
+.text-container {
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .not-found-circle {
+    height: 70vw;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .not-found-circle {
+    height: 100vw;
+    width: 100vw;
+  }
+}

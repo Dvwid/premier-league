@@ -28,7 +28,7 @@ export class TeamComponent implements OnInit {
   goalsAgainst:number
   @Input()
   difference:number
-
+ 
 
   constructor() {
     this.name="",
@@ -43,6 +43,8 @@ export class TeamComponent implements OnInit {
     this.goalsAgainst=0;
     this.difference=0;
    }
+
+
 
   ngOnInit(): void {
   }

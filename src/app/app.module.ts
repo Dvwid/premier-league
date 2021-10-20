@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,14 +28,13 @@ import { CardComponent } from './card/card.component';
     TeamComponent,
     FooterComponent,
     CardComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
