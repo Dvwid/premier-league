@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Team } from '../team-module';
 
 @Component({
   selector: 'app-team',
@@ -7,25 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TeamComponent {
   @Input()
-  name:string
-  @Input()
-  rank:number
-  @Input()
-  imgUrl:string
-  @Input()
-  points:number
-  @Input()
-  abbreviation:string
-  @Input()
-  wins:number
-  @Input()
-  draws:number
-  @Input()
-  losses:number
-  @Input()
-  goals:number
-  @Input()
-  goalsAgainst:number
-  @Input()
-  difference:number
+  teamDetails:Team
 }

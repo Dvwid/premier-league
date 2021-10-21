@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Team } from '../team-module';
 
 @Component({
   selector: 'app-ranking',
@@ -8,12 +7,10 @@ import { Team } from '../team-module';
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements OnInit {
-  standings: any[] = []
-  clubs: any[] = []
+  teams: Array<any> = []
+  clubs: Array<any> = []
   name: string = "";
   score: string = "";
-
-  teams: Array<Object> = []
 
   constructor(private activatedRoute: ActivatedRoute) {}
     
@@ -31,29 +28,26 @@ export class RankingComponent implements OnInit {
         goals:element.stats[4].value,
         goalsAgainst:element.stats[5].value,
         difference:element.stats[9].value,
-
+        scoreString: element.stats[6].displayValue
       }))
-      this.standings = data.league.data.standings;
-      this.clubs = data.league.data.standings;
-      console.log(this.teams)
-      
+      this.clubs = this.teams
     })
   }
   resetClubs():void{
     this.name = "";
     this.score = "";
-    this.standings = this.clubs;
+    this.teams = this.clubs;
   }
 
   searchClubs(name:string, score:string):void{
     if(score){
-      this.standings = this.clubs.filter((el) => el.stats[6].displayValue === score)
+      this.teams = this.clubs.filter((team) => team.scoreString === score)
     }
     if(name){
-      this.standings = this.clubs.filter((el) => el.team.name.toUpperCase().includes(name.toUpperCase()))
+      this.teams = this.clubs.filter((team) => team.name.toUpperCase().includes(name.toUpperCase()))
     }
     if(!score && !name){
-      this.standings = this.clubs
+      this.teams = this.clubs
     }
   }
 
