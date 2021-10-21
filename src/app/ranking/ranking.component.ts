@@ -35,8 +35,6 @@ export class RankingComponent implements OnInit {
       this.title = data.league.data.name;
       this.season = data.league.data.season;
       this.clubs = this.teams
-
-      
     })
   }
   resetClubs():void{
