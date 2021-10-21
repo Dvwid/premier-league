@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.css']
 })
-export class TeamComponent implements OnInit {
+export class TeamComponent {
   @Input()
   name:string
   @Input()
@@ -28,13 +28,4 @@ export class TeamComponent implements OnInit {
   goalsAgainst:number
   @Input()
   difference:number
- 
-
-  constructor() {}
-
-
-
-  ngOnInit(): void {
-  }
-
 }
