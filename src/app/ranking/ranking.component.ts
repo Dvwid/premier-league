@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,13 +20,13 @@ export class RankingComponent implements OnInit {
       this.clubs = data.league.data.standings;
     })
   }
-  resetClubs(){
+  resetClubs():void{
     this.name = "";
     this.score = "";
     this.standings = this.clubs;
   }
 
-  searchClubs(name:string, score:string){
+  searchClubs(name:string, score:string):void{
     if(score){
       this.standings = this.clubs.filter((el) => el.stats[6].displayValue === score)
     }

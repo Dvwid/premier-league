@@ -30,19 +30,7 @@ export class TeamComponent implements OnInit {
   difference:number
  
 
-  constructor() {
-    this.name="",
-    this.rank=0,
-    this.imgUrl=""
-    this.points=0;
-    this.abbreviation="";
-    this.wins=0;
-    this.draws=0;
-    this.losses=0;
-    this.goals=0;
-    this.goalsAgainst=0;
-    this.difference=0;
-   }
+  constructor() {}
 
 
 

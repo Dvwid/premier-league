@@ -14,7 +14,6 @@ import { ErrorComponent } from './error/error.component';
 import { TeamComponent } from './team/team.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +24,6 @@ import { CardComponent } from './card/card.component';
     ErrorComponent,
     TeamComponent,
     FooterComponent,
-    CardComponent,
   ],
   imports: [
     BrowserModule,
