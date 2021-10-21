@@ -10,4 +10,5 @@ export interface Team {
   goals:number
   goalsAgainst:number
   difference:number
+  scoreString:string
 }

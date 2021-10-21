@@ -4,7 +4,7 @@
 }
 .image-container {
   margin-right: 5vw;
-  height: 75vh;
+  height: 480px;
 }
 .landing-text-container {
   padding: 0 5vw;
@@ -30,7 +30,7 @@
   .image-container {
     margin-right: 0;
     margin-bottom: 50px;
-    height: 70vh;
+    height: 500px;
   }
   .landing-button {
     width: 100%;
