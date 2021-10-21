@@ -16,8 +16,6 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { CardComponent } from './card/card.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

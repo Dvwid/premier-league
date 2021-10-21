@@ -3,8 +3,8 @@
   overflow: hidden;
 }
 .image-container {
-  height: 65vh;
   margin-right: 5vw;
+  height: 75vh;
 }
 .landing-text-container {
   padding: 0 5vw;
@@ -30,6 +30,7 @@
   .image-container {
     margin-right: 0;
     margin-bottom: 50px;
+    height: 60vh;
   }
   .landing-button {
     width: 100%;
