@@ -17,20 +17,10 @@
 
   <p class="display-4 w-100 d-flex justify-content-center">Ranking</p>
 
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 p-5">  
-  <div class="col mb-4" *ngFor="let standing of standings">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 p-5">  
+  <div class="col mb-4" *ngFor="let team of teams">
     <app-team 
-      [rank]="standing.stats[8].value"
-      [name]="standing.team.name"
-      [imgUrl]="standing.team.logos[0].href"
-      [points]="standing.stats[6].value"
-      [abbreviation]="standing.team.abbreviation"
-      [wins]="standing.stats[0].value"
-      [draws]="standing.stats[2].value"
-      [losses]="standing.stats[1].value"
-      [goals]="standing.stats[4].value"
-      [goalsAgainst]="standing.stats[5].value"
-      [difference]="standing.stats[9].value"
+      [teamDetails]="team"
     >
     
     </app-team>

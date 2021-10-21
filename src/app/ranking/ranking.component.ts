@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,8 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./ranking.component.css']
 })
 export class RankingComponent implements OnInit {
-  standings: any[] = []
-  clubs: any[] = []
+  teams: Array<any> = []
+  clubs: Array<any> = []
   name: string = "";
   score: string = "";
 
@@ -16,25 +16,38 @@ export class RankingComponent implements OnInit {
     
   ngOnInit():void{
     this.activatedRoute.data.subscribe((data) => {
-      this.standings = data.league.data.standings;
-      this.clubs = data.league.data.standings;
+      data.league.data.standings.map((element:any) => this.teams.push({
+        name: element.team.name,
+        rank: element.stats[8].value,
+        imgUrl: element.team.logos[0].href,
+        points: element.stats[6].value,
+        abbreviation: element.team.abbreviation,
+        wins:element.stats[0].value,
+        draws:element.stats[2].value,
+        losses:element.stats[1].value,
+        goals:element.stats[4].value,
+        goalsAgainst:element.stats[5].value,
+        difference:element.stats[9].value,
+        scoreString: element.stats[6].displayValue
+      }))
+      this.clubs = this.teams
     })
   }
-  resetClubs(){
+  resetClubs():void{
     this.name = "";
     this.score = "";
-    this.standings = this.clubs;
+    this.teams = this.clubs;
   }
 
-  searchClubs(name:string, score:string){
+  searchClubs(name:string, score:string):void{
     if(score){
-      this.standings = this.clubs.filter((el) => el.stats[6].displayValue === score)
+      this.teams = this.clubs.filter((team) => team.scoreString === score)
     }
     if(name){
-      this.standings = this.clubs.filter((el) => el.team.name.toUpperCase().includes(name.toUpperCase()))
+      this.teams = this.clubs.filter((team) => team.name.toUpperCase().includes(name.toUpperCase()))
     }
     if(!score && !name){
-      this.standings = this.clubs
+      this.teams = this.clubs
     }
   }
 
