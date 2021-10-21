@@ -11,6 +11,8 @@ export class RankingComponent implements OnInit {
   clubs: Array<any> = []
   name: string = "";
   score: string = "";
+  title: string = "";
+  season: number = 0;
 
   constructor(private activatedRoute: ActivatedRoute) {}
     
@@ -30,7 +32,11 @@ export class RankingComponent implements OnInit {
         difference:element.stats[9].value,
         scoreString: element.stats[6].displayValue
       }))
+      this.title = data.league.data.name;
+      this.season = data.league.data.season;
       this.clubs = this.teams
+
+      
     })
   }
   resetClubs():void{
